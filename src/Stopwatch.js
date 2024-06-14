@@ -12,7 +12,7 @@ const Stopwatch = () => {
     let intervalId;
     if (isRunning) {
      
-      intervalId = setInterval(() => setTime(time + 1), 10);
+      intervalId = setInterval(() => setTime(prevtime=> prevtime + 1), 10);
     }
     return () => clearInterval(intervalId);
   }, [isRunning]);

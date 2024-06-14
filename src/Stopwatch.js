@@ -15,7 +15,7 @@ const Stopwatch = () => {
       intervalId = setInterval(() => setTime(time + 1), 10);
     }
     return () => clearInterval(intervalId);
-  }, [isRunning, time]);
+  }, [isRunning]);
 
 
   const minutes = Math.floor((time % 360000) / 6000);
